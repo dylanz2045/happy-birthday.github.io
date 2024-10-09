@@ -3,7 +3,7 @@
   "name": "德涛",
   "greetingText": "今日系你生日",
   "wishText": "May the js.prototypes always be with you! ;)",
-  "imagePath": "img/tao.jpg",
+  "imagePath": "img/tao.png",
   "text1": "生日快乐！",
   "textInChatBox": "阿伦祝你：身体健康，生活愉快，开心每一天",
   "sendButtonLabel": "发送",
@@ -12,7 +12,7 @@
   "text4": "真系好多谢甘多年来你的",
   "text4Adjective": "照顾",
   "text5Entry": "我知道唔洗讲嘢",
-  "text5Content": "我地系兄弟！",1
+  "text5Content": "我地系兄弟！",
   "smiley": ":)",
   "bigTextPart1": "所",
   "bigTextPart2": "以",
