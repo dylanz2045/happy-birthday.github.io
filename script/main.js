@@ -231,8 +231,8 @@ const endY = viewportHeight - (viewportHeight * 0.5); // 从底部边缘向上25
       "-=2"
     )
     .from(".hat", 0.5, {
-      x: `${endX}px`, // 结束位置：屏幕右下角的25%
-      y: `${endY}px`,
+      x: centerX + 25, // 从屏幕中心向右移动25px
+      y: centerY - 25,  // 从屏幕中心向下移动25px
       rotation: -180,
       opacity: 0
     })
