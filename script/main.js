@@ -26,18 +26,8 @@ const fetchData = () => {
 
 // Animation Timeline
 const animationTimeline = () => {
-// 获取视口的宽度和高度
-const viewportWidth = window.innerWidth;
-const viewportHeight = window.innerHeight;
-
-// 计算屏幕右下角25%的位置
-const endX = viewportWidth - (viewportWidth * 0.5); // 从右边缘向左25%
-const endY = viewportHeight - (viewportHeight * 0.5); // 从底部边缘向上25%
-
-
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
-
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
@@ -224,15 +214,15 @@ const endY = viewportHeight - (viewportHeight * 0.5); // 从底部边缘向上25
       {
         scale: 3.5,
         opacity: 0,
-        x: centerX + 25, // 从屏幕中心向右移动25px
-        y: centerY - 25,  // 从屏幕中心向下移动25px
+        x: 25,
+        y: -25,
         rotationZ: -45
       },
       "-=2"
     )
     .from(".hat", 0.5, {
-      x: centerX + 25, // 从屏幕中心向右移动25px
-      y: centerY - 25,  // 从屏幕中心向下移动25px
+      x: -100,
+      y: 350,
       rotation: -180,
       opacity: 0
     })
