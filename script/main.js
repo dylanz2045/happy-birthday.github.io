@@ -28,6 +28,18 @@ const fetchData = () => {
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
+  // 获取视口尺寸
+const windowHeight = window.innerHeight;
+const windowWidth = window.innerWidth;
+
+// 获取图片元素及其尺寸
+const imgElement = document.querySelector(".lydia-dp");
+const imgWidth = imgElement.offsetWidth;
+const imgHeight = imgElement.offsetHeight;
+
+// 计算图片的中心位置
+const centerX = (windowWidth - imgWidth) / 2;
+const centerY = (windowHeight - imgHeight) / 2;
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
@@ -214,15 +226,15 @@ const animationTimeline = () => {
       {
         scale: 3.5,
         opacity: 0,
-        x: 25,
-        y: -25,
+        x: centerX + 25, // 从屏幕中心向右移动25px
+        y: centerY - 25,  // 从屏幕中心向下移动25px
         rotationZ: -45
       },
       "-=2"
     )
     .from(".hat", 0.5, {
-      x: -100,
-      y: 350,
+      x: centerX + 25, // 从屏幕中心向右移动25px
+      y: centerY - 25,  // 从屏幕中心向下移动25px
       rotation: -180,
       opacity: 0
     })
