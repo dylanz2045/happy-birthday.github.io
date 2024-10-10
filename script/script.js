@@ -1,6 +1,6 @@
-// 确保DOM完全加载后再执行
-$(document).ready(function() {
-    var audio = $('.song')[0];
+
+document.getElementById('playButton').addEventListener('click', function() {
+    var audio = document.getElementById('audio');
     audio.play();
-    console.log("应该播放音乐了！")
+    console.log("应该播放音乐");
 });
