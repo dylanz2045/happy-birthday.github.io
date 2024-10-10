@@ -52,6 +52,9 @@ const animationTimeline = () => {
     skewX: "-15deg"
   };
 
+  // var audio = $('.song')[0];
+  // audio.play();
+
   const tl = new TimelineMax();
 
   tl
