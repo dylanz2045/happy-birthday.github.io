@@ -26,20 +26,18 @@ const fetchData = () => {
 
 // Animation Timeline
 const animationTimeline = () => {
+// 获取视口的宽度和高度
+const viewportWidth = window.innerWidth;
+const viewportHeight = window.innerHeight;
+
+// 计算屏幕右下角25%的位置
+const endX = viewportWidth - (viewportWidth * 0.5); // 从右边缘向左25%
+const endY = viewportHeight - (viewportHeight * 0.5); // 从底部边缘向上25%
+
+
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
-  // 获取视口尺寸
-const windowHeight = window.innerHeight;
-const windowWidth = window.innerWidth;
 
-// 获取图片元素及其尺寸
-const imgElement = document.querySelector(".lydia-dp");
-const imgWidth = imgElement.offsetWidth;
-const imgHeight = imgElement.offsetHeight;
-
-// 计算图片的中心位置
-const centerX = (windowWidth - imgWidth) / 2;
-const centerY = (windowHeight - imgHeight) / 2;
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
@@ -233,8 +231,8 @@ const centerY = (windowHeight - imgHeight) / 2;
       "-=2"
     )
     .from(".hat", 0.5, {
-      x: centerX + 25, // 从屏幕中心向右移动25px
-      y: centerY - 25,  // 从屏幕中心向下移动25px
+      x: `${endX}px`, // 结束位置：屏幕右下角的25%
+      y: `${endY}px`,
       rotation: -180,
       opacity: 0
     })
